@@ -1,0 +1,150 @@
+/* Reset Dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+/* Navbar */
+header {
+  background: #003366; /* Biru Maskapai */
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Container Utama */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.btn-tambah {
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-tambah:hover {
+  background: #218838;
+}
+
+/* Grid System untuk Kartu Pesawat (Responsive Point!) */
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Kartu Pesawat */
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+  border-top: 4px solid #ddd; /* Default border */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+.card-body {
+  padding: 1.5rem;
+}
+.card-footer {
+  padding: 1rem;
+  background: #f8f9fa;
+  text-align: right;
+}
+
+.reg-code {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Status Badge Logic */
+.badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+.status-Active {
+  background: #28a745;
+  border-color: #28a745;
+} /* Hijau */
+.status-Maintenance {
+  background: #ffc107;
+  color: #333;
+  border-color: #ffc107;
+} /* Kuning */
+.status-Grounded {
+  background: #dc3545;
+  border-color: #dc3545;
+} /* Merah */
+
+/* Tombol Aksi */
+.btn-action {
+  text-decoration: none;
+  color: #555;
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+.btn-action:hover {
+  color: #003366;
+}
+
+.airline-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.card-body {
+  padding: 1.5rem;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .fleet-grid {
+    grid-template-columns: 1fr;
+  }
+}
