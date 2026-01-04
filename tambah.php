@@ -1,3 +1,11 @@
+<?php
+session_start(); 
+if (!isset($_SESSION['status']) || $_SESSION['status'] != "login") {
+    header("Location: login.php");
+    exit;
+}
+require_once 'koneksi.php';
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
