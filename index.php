@@ -1,4 +1,9 @@
 <?php
+session_start(); 
+if (!isset($_SESSION['status']) || $_SESSION['status'] != "login") {
+    header("Location: login.php");
+    exit;
+}
 require_once 'koneksi.php';
 
 $query = "SELECT * FROM pesawat ORDER BY id_pesawat DESC";
@@ -19,6 +24,7 @@ $result = mysqli_query($koneksi, $query);
         <div class="logo">SkyFleet Manager</div>
         <nav>
             <span style="font-size: 0.9rem;">Admin: Farel Achmad Caesario | A12.2024.07195</span>
+            <a href="logout.php" style="color: white; text-decoration: none; border: 1px solid white; padding: 5px 10px; border-radius: 4px; font-size: 0.8rem;">Logout ↪</a>
         </nav>
     </header>
 
