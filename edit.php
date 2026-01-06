@@ -61,6 +61,7 @@ if (mysqli_num_rows($result) < 1) {
                         <option value="Citilink" <?= ($data['maskapai'] == 'Citilink') ? 'selected' : '' ?>>Citilink</option>
                         <option value="Batik Air" <?= ($data['maskapai'] == 'Batik Air') ? 'selected' : '' ?>>Batik Air</option>
                         <option value="AirAsia" <?= ($data['maskapai'] == 'AirAsia') ? 'selected' : '' ?>>AirAsia</option>
+                        <option value="Super Air Jet" <?= ($data['maskapai'] == 'Super Air Jet') ? 'selected' : '' ?>>Super Air Jet</option>
                     </select>
                 </div>
 
@@ -93,5 +94,9 @@ if (mysqli_num_rows($result) < 1) {
             </form>
         </div>
     </main>
+        <footer style="text-align: center; padding: 2rem; color: #888; font-size: 0.8rem; margin-top: 2rem; border-top: 1px solid #eee;">
+        <p>&copy; <?= date('Y') ?> Fleet Management System.</p>
+        <p>Created with by <strong>Farel Achmad Caesario | A12.2024.07195</strong> - Universitas Dian Nuswantoro</p>
+    </footer>
 </body>
 </html>
