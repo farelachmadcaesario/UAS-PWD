@@ -27,6 +27,7 @@ if (mysqli_num_rows($result) < 1) {
     <meta charset="UTF-8">
     <title>Edit Data Armada</title>
     <link rel="stylesheet" href="aset/style.css">
+    <link rel="icon" href="https://img.icons8.com/color/48/airplane-take-off.png" type="image/png">
     <style>
         .form-container { background: white; max-width: 600px; margin: 2rem auto; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .form-group { margin-bottom: 1.2rem; }
@@ -86,7 +87,6 @@ if (mysqli_num_rows($result) < 1) {
                         <option value="Active" <?= ($data['status_pesawat'] == 'Active') ? 'selected' : '' ?>>Active</option>
                         <option value="Maintenance" <?= ($data['status_pesawat'] == 'Maintenance') ? 'selected' : '' ?>>Maintenance</option>
                         <option value="Grounded" <?= ($data['status_pesawat'] == 'Grounded') ? 'selected' : '' ?>>Grounded</option>
-                        <option value="Retired" <?= ($data['status_pesawat'] == 'Retired') ? 'selected' : '' ?>>Retired</option>
                     </select>
                 </div>
 

@@ -13,6 +13,7 @@ require_once 'koneksi.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Armada Baru</title>
     <link rel="stylesheet" href="aset/style.css">
+    <link rel="icon" href="https://img.icons8.com/color/48/airplane-take-off.png" type="image/png">
     <style>
         .form-container {
             background: white;
